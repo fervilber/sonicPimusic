@@ -1,0 +1,31 @@
+# mayo 21
+
+## ruido galactico
+
+```
+# Coded by VilBer
+# 1. bateria espacial lado aleatorio
+live_loop :moon_bass, auto_cue: false do
+  sample :bd_haus, amp: 3, pan: [-1, 1].choose
+  sleep [0.5,0.75,1].choose
+end
+# 2. estallido metálico
+live_loop :eva1, auto_cue: false do
+  sample :bass_drop_c, amp: 3
+  sleep [3,6].choose
+end
+
+# 3. Chicharra
+live_loop :time do
+  synth :tb303, release: 8, note: :e1, cutoff: (range 90, 60, -10).tick
+  sleep 8
+end
+
+# 4. ritmo
+live_loop :guit do
+  #sample :ambi_glass_rub, rate: 0.7
+  sample :bd_ada
+  sleep 0.5
+end
+
+```
