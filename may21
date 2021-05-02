@@ -61,3 +61,15 @@ loop do
   sleep rrand(0.125,2)
 end
 ```
+
+## Otro aleatorio
+
+```
+use_synth :dsaw
+loop do
+  play 40, amp: 0.2, release: 1
+  play chord( rrand(60,78), :major), amp: 0.5, release: 2 if one_in(3)
+  sample :glitch_perc2 if one_in(2)
+  sleep 1
+end
+```
