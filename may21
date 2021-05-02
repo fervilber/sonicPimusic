@@ -50,3 +50,14 @@ end
   sleep 0.5
 end
 ```
+## random song
+
+```
+# aleatorius Melodia
+use_synth :piano
+#Musica aleatoria al piano
+loop do
+  play chord( rrand(50, 95),:major)# ,amp:0.5
+  sleep rrand(0.125,2)
+end
+```
